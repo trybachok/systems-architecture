@@ -1,0 +1,280 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="zadanie-1-course-manager-uml" name="Задание 1 UML">
+    <mxGraphModel dx="2236" dy="1456" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="S1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;align=center;fontStyle=1;fontFamily=Arial;fontSize=12;spacingTop=8;opacity=35;labelBackgroundColor=#D4E1F5;" value="&lt;b&gt;Domain model&lt;/b&gt;" vertex="1">
+          <mxGeometry height="540" width="560" x="1650" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="S2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#9AA7B3;dashed=1;verticalAlign=top;align=center;fontStyle=1;fontFamily=Arial;fontSize=12;spacingTop=8;opacity=35;" value="&lt;b&gt;Application services and commands&lt;/b&gt;" vertex="1">
+          <mxGeometry height="760" width="1310" x="30" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="S3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#9AA7B3;dashed=1;verticalAlign=top;align=center;fontStyle=1;fontFamily=Arial;fontSize=12;spacingTop=8;opacity=35;" value="&lt;b&gt;Factories and repositories&lt;/b&gt;" vertex="1">
+          <mxGeometry height="560" width="690" x="10" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="S4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9AA7B3;dashed=1;verticalAlign=top;align=center;fontStyle=1;fontFamily=Arial;fontSize=12;spacingTop=8;opacity=35;" value="&lt;b&gt;Strategies and payment integration&lt;/b&gt;" vertex="1">
+          <mxGeometry height="700" width="880" x="740" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="S5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#9AA7B3;dashed=1;verticalAlign=top;align=center;fontStyle=1;fontFamily=Arial;fontSize=12;spacingTop=8;opacity=35;" value="&lt;b&gt;Events and notifications&lt;/b&gt;" vertex="1">
+          <mxGeometry height="867.5" width="730" x="1460" y="42.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Course" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FBFF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;font&gt;«abstract»&lt;/font&gt;&lt;br&gt;&lt;b&gt;Course&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ id: CourseId&lt;br&gt;+ title: String&lt;br&gt;+ price: Money&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ getType(): CourseType&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="190" x="1730" y="987.5" as="geometry" />
+        </mxCell>
+        <mxCell id="OnlineCourse" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FBFF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;OnlineCourse&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ meetingUrl: String&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ getType(): CourseType&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="1700" y="1177.5" as="geometry" />
+        </mxCell>
+        <mxCell id="OfflineCourse" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FBFF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;OfflineCourse&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ address: String&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ getType(): CourseType&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="1960" y="1177.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Student" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FBFF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;Student&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ id: StudentId&lt;br&gt;+ name: String&lt;br&gt;+ email: String&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="170" x="1710" y="1327.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Enrollment" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FBFF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;Enrollment&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ id: EnrollmentId&lt;br&gt;+ studentId: StudentId&lt;br&gt;+ courseId: CourseId&lt;br&gt;+ status: EnrollmentStatus&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ markAsPaid(paymentId)&lt;br&gt;+ complete()&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="230" x="1950" y="1317.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GradeResult" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FBFF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;GradeResult&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ studentId: StudentId&lt;br&gt;+ courseId: CourseId&lt;br&gt;+ score: Number&lt;br&gt;+ passed: Boolean&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="220" x="1960" y="987.5" as="geometry" />
+        </mxCell>
+        <mxCell id="CreateCourseCommand" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FFF8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;CreateCourseCommand&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ type: CourseType&lt;br&gt;+ title: String&lt;br&gt;+ price: Money&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="180" x="110" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="EnrollStudentCommand" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FFF8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;EnrollStudentCommand&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ studentId: StudentId&lt;br&gt;+ courseId: CourseId&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="85" width="180" x="110" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="PayCourseCommand" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FFF8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;PayCourseCommand&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ studentId: StudentId&lt;br&gt;+ courseId: CourseId&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="85" width="180" x="90" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="CourseApplicationService" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FFF8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;CourseApplicationService&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;- factoryRegistry: CourseFactoryRegistry&lt;br&gt;- courseRepository: CourseRepository&lt;br&gt;- eventPublisher: DomainEventPublisher&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ createCourse(command): Course&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="115" width="300" x="110" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="EnrollmentApplicationService" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FFF8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;EnrollmentApplicationService&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;- studentRepository: StudentRepository&lt;br&gt;- courseRepository: CourseRepository&lt;br&gt;- enrollmentRepository: EnrollmentRepository&lt;br&gt;- eventPublisher: DomainEventPublisher&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ enroll(command): Enrollment&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="300" x="470" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="GradeApplicationService" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FFF8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;GradeApplicationService&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;- courseRepository: CourseRepository&lt;br&gt;- enrollmentRepository: EnrollmentRepository&lt;br&gt;- strategyResolver: GradeStrategyResolver&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ calculateFinalGrade(studentId, courseId): GradeResult&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="165" width="300" x="950" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="PaymentApplicationService" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#F8FFF8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;PaymentApplicationService&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;- paymentGateway: PaymentGateway&lt;br&gt;- enrollmentRepository: EnrollmentRepository&lt;br&gt;- eventPublisher: DomainEventPublisher&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ payForCourse(command): PaymentResult&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="300" x="870" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="CourseFactory" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFFDF2;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;font&gt;«interface»&lt;/font&gt;&lt;br&gt;&lt;b&gt;CourseFactory&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ create(command): Course&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="220" x="20" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="OnlineCourseFactory" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFFDF2;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;OnlineCourseFactory&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ create(command): Course&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="220" x="20" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="OfflineCourseFactory" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFFDF2;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;OfflineCourseFactory&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ create(command): Course&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="220" x="430" y="1062.5" as="geometry" />
+        </mxCell>
+        <mxCell id="CourseFactoryRegistry" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFFDF2;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;CourseFactoryRegistry&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;- factories: Map&amp;lt;CourseType, CourseFactory&amp;gt;&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ getFactory(type): CourseFactory&lt;br&gt;+ register(type, factory)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="300" x="330" y="877.5" as="geometry" />
+        </mxCell>
+        <mxCell id="CourseRepository" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFFDF2;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;font&gt;«interface»&lt;/font&gt;&lt;br&gt;&lt;b&gt;CourseRepository&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ save(course)&lt;br&gt;+ findById(courseId)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="190" x="40" y="1245" as="geometry" />
+        </mxCell>
+        <mxCell id="StudentRepository" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFFDF2;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;font&gt;«interface»&lt;/font&gt;&lt;br&gt;&lt;b&gt;StudentRepository&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ findById(studentId)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="190" x="250" y="1155" as="geometry" />
+        </mxCell>
+        <mxCell id="EnrollmentRepository" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFFDF2;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;font&gt;«interface»&lt;/font&gt;&lt;br&gt;&lt;b&gt;EnrollmentRepository&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ save(enrollment)&lt;br&gt;+ findByStudentAndCourse(...)&lt;br&gt;+ exists(studentId, courseId)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="190" x="460" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="GradeCalculationStrategy" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FBF8FF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;font&gt;«interface»&lt;/font&gt;&lt;br&gt;&lt;b&gt;GradeCalculationStrategy&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ calculate(enrollment, course): GradeResult&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="260" x="850" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="OnlineGradeStrategy" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FBF8FF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;OnlineGradeStrategy&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ calculate(enrollment, course): GradeResult&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="240" x="810" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="OfflineGradeStrategy" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FBF8FF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;OfflineGradeStrategy&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ calculate(enrollment, course): GradeResult&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="240" x="1300" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="GradeStrategyResolver" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FBF8FF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;GradeStrategyResolver&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;- strategies: Map&amp;lt;CourseType, GradeCalculationStrategy&amp;gt;&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ resolve(courseType): GradeCalculationStrategy&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="300" x="1250" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="PaymentGateway" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FBF8FF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;font&gt;«interface»&lt;/font&gt;&lt;br&gt;&lt;b&gt;PaymentGateway&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ pay(request): PaymentResult&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="210" x="830" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="PaymentGatewayProxy" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FBF8FF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;PaymentGatewayProxy&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;- realGateway: PaymentGateway&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ pay(request): PaymentResult&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="95" width="230" x="1290" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="ExternalPaymentAdapter" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FBF8FF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;ExternalPaymentAdapter&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;- client: ExternalPaymentApiClient&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ pay(request): PaymentResult&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="95" width="230" x="820" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="ExternalPaymentApiClient" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FBF8FF;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;ExternalPaymentApiClient&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ createPayment(...)&lt;br&gt;+ getPaymentStatus(...)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="115" width="180" x="1315" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="DomainEvent" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFF8F8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;font&gt;«interface»&lt;/font&gt;&lt;br&gt;&lt;b&gt;DomainEvent&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="1510" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CourseCreatedEvent" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFF8F8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;CourseCreatedEvent&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="55" width="180" x="1510" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="StudentEnrolledEvent" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFF8F8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;StudentEnrolledEvent&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="55" width="180" x="1725" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="PaymentSucceededEvent" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFF8F8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;PaymentSucceededEvent&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="55" width="180" x="1940" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="PaymentFailedEvent" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFF8F8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;PaymentFailedEvent&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="55" width="180" x="1725" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="DomainEventPublisher" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFF8F8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;DomainEventPublisher&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ publish(event)&lt;br&gt;+ subscribe(eventType, observer)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="85" width="250" x="1510" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="DomainEventObserver" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFF8F8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;font&gt;«interface»&lt;/font&gt;&lt;br&gt;&lt;b&gt;DomainEventObserver&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ handle(event)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="220" x="1910" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="NotificationObserver" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFF8F8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;NotificationObserver&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;- channels: List&amp;lt;NotificationChannel&amp;gt;&lt;/div&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ handle(event)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="95" width="220" x="1880" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="NotificationChannel" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFF8F8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;font&gt;«interface»&lt;/font&gt;&lt;br&gt;&lt;b&gt;NotificationChannel&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ send(notification)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="220" x="1525" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="EmailNotificationChannel" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFF8F8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;EmailNotificationChannel&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ send(notification)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="1510" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="SmsNotificationChannel" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFF8F8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;SmsNotificationChannel&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ send(notification)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="1740" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="PushNotificationChannel" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=6;spacingLeft=6;spacingRight=6;spacingBottom=6;fillColor=#FFF8F8;strokeColor=#2F3A4A;fontFamily=Arial;fontSize=12;" value="&lt;div&gt;&lt;b&gt;PushNotificationChannel&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot;&gt;+ send(notification)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="1970" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="E1000" edge="1" parent="1" source="OnlineCourse" style="endArrow=block;endFill=0;html=1;rounded=0;strokeColor=#2F3A4A;fontSize=12;" target="Course" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1001" edge="1" parent="1" source="OfflineCourse" style="endArrow=block;endFill=0;html=1;rounded=0;strokeColor=#2F3A4A;fontSize=12;" target="Course" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1002" edge="1" parent="1" source="Student" style="endArrow=open;endFill=0;html=1;rounded=0;strokeColor=#5D6D7E;fontSize=12;" target="Enrollment" value="1 → 0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1003" edge="1" parent="1" source="Course" style="endArrow=open;endFill=0;html=1;rounded=0;strokeColor=#5D6D7E;fontSize=12;" target="Enrollment" value="1 → 0..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1920" y="1257.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E1004" edge="1" parent="1" source="OnlineCourseFactory" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="CourseFactory" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1005" edge="1" parent="1" source="OfflineCourseFactory" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="CourseFactory" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1006" edge="1" parent="1" source="OnlineGradeStrategy" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="GradeCalculationStrategy" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1007" edge="1" parent="1" source="OfflineGradeStrategy" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="GradeCalculationStrategy" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1008" edge="1" parent="1" source="ExternalPaymentAdapter" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="PaymentGateway" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1009" edge="1" parent="1" source="PaymentGatewayProxy" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="PaymentGateway" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1010" edge="1" parent="1" source="CourseCreatedEvent" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="DomainEvent" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1011" edge="1" parent="1" source="StudentEnrolledEvent" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="DomainEvent" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1012" edge="1" parent="1" source="PaymentSucceededEvent" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="DomainEvent" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1013" edge="1" parent="1" source="PaymentFailedEvent" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="DomainEvent" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1014" edge="1" parent="1" source="NotificationObserver" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="DomainEventObserver" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1015" edge="1" parent="1" source="EmailNotificationChannel" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="NotificationChannel" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1016" edge="1" parent="1" source="SmsNotificationChannel" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="NotificationChannel" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1017" edge="1" parent="1" source="PushNotificationChannel" style="endArrow=block;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#2F3A4A;fontSize=12;" target="NotificationChannel" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1018" edge="1" parent="1" source="CourseFactoryRegistry" style="endArrow=open;endFill=0;html=1;rounded=0;strokeColor=#5D6D7E;fontSize=12;" target="CourseFactory" value="selects">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1019" edge="1" parent="1" source="GradeStrategyResolver" style="endArrow=open;endFill=0;html=1;rounded=0;strokeColor=#5D6D7E;fontSize=12;" target="GradeCalculationStrategy" value="selects">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1020" edge="1" parent="1" source="PaymentGatewayProxy" style="endArrow=open;endFill=0;html=1;rounded=0;strokeColor=#5D6D7E;fontSize=12;" target="PaymentGateway" value="delegates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1021" edge="1" parent="1" source="ExternalPaymentAdapter" style="endArrow=open;endFill=0;html=1;rounded=0;strokeColor=#5D6D7E;fontSize=12;" target="ExternalPaymentApiClient" value="adapts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1022" edge="1" parent="1" source="DomainEventPublisher" style="endArrow=open;endFill=0;html=1;rounded=0;strokeColor=#5D6D7E;fontSize=12;" target="DomainEventObserver" value="notifies">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1023" edge="1" parent="1" source="DomainEventPublisher" style="endArrow=open;endFill=0;html=1;rounded=0;strokeColor=#5D6D7E;fontSize=12;" target="DomainEvent" value="publishes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1024" edge="1" parent="1" source="NotificationObserver" style="endArrow=open;endFill=0;html=1;rounded=0;strokeColor=#5D6D7E;fontSize=12;" target="NotificationChannel" value="sends via">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1025" edge="1" parent="1" source="CourseApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="CreateCourseCommand" value="uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1026" edge="1" parent="1" source="CourseApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="CourseFactoryRegistry" value="creates via">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1027" edge="1" parent="1" source="CourseApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="CourseRepository" value="saves">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E1028" edge="1" parent="1" source="CourseApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="DomainEventPublisher" value="publishes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1029" edge="1" parent="1" source="EnrollmentApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="EnrollStudentCommand" value="uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1030" edge="1" parent="1" source="EnrollmentApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="StudentRepository" value="reads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1031" edge="1" parent="1" source="EnrollmentApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="CourseRepository" value="reads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1032" edge="1" parent="1" source="EnrollmentApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="EnrollmentRepository" value="saves">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1033" edge="1" parent="1" source="EnrollmentApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="DomainEventPublisher" value="publishes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1034" edge="1" parent="1" source="GradeApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="CourseRepository" value="reads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1035" edge="1" parent="1" source="GradeApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="EnrollmentRepository" value="reads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1036" edge="1" parent="1" source="GradeApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="GradeStrategyResolver" value="selects strategy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1037" edge="1" parent="1" source="PaymentApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="PayCourseCommand" value="uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1038" edge="1" parent="1" source="PaymentApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="PaymentGateway" value="pays through">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="1230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E1039" edge="1" parent="1" source="PaymentApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="EnrollmentRepository" value="updates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="E1040" edge="1" parent="1" source="PaymentApplicationService" style="endArrow=open;endFill=0;html=1;rounded=0;dashed=1;strokeColor=#5D6D7E;fontSize=12;" target="DomainEventPublisher" value="publishes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
